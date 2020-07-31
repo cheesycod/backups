@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+{% load prettify %}
+{% block body %}
+    <h1>All Pages</h1>
+
+    {% for entry in entries %}
+        <a href="{{ entry }}">{{ entry|prettify }}</a><br />
+    {% endfor %}
+    </ul>
+{% endblock %}

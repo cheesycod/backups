@@ -1,0 +1,9 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ name }}
+{% endblock %}
+
+{% block body %}
+    <p>{% autoescape off %} {{ content }} {% endautoescape %}</p><br/>
+{% endblock %}

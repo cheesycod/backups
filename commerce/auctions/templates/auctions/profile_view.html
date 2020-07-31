@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h1>Profile information for {{user.username}}</h1>
+    <p>
+        <strong>
+            First Name: {{ user.first_name }}<br />
+            Last Name: {{ user.last_name }}<br />
+            Address: {{ user.address }}<br />
+        </strong>
+    </p>
+{% endblock %}

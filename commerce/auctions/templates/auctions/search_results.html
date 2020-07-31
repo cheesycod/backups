@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {%if input == "all"%}
+        <h1>Showing all {{ type }}s</h1>
+    {%else%}
+        <h1>Showing {{ type }} results for {{ input }}</h2>
+    {%endif%}
+    {% for result in matches %}
+        <a href="{{type}}/{{result}}">{{result}}</a><br />
+    {%endfor%}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ iname }}</h2>
+    {% if ipic == "No image provided" %}
+        <p>No image was provided for this listing</p>
+    {% else %}
+        <img src='{{ipic}}' alt='Picture of {{iname}}'/>
+    {% endif %}
+    <p> </p>
+    {% if ibidder == "" %}
+    <h3>No current bidders</h3>
+    {% else %}
+    <h3>The current bidder for this product is {{ ibidder }}</h3>
+    {% endif %}
+    <h3><strong>Current Cost: ${{icosthigh}}</strong></h3>
+    <h4><strong>Base Cost: ${{icost}}</strong></h4>
+    <p> </p>
+    <a href="{% url 'bid' %}{{iid}}">Bid Higher</a>
+    {% if isowner %}
+    <p> </p>
+    <a href="{% url 'delete' %}{{iid}}">Delete Item</a>
+    {% endif %}
+{% endblock %}

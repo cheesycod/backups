@@ -1,0 +1,11 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia Error (Invalid Wiki Name)
+{% endblock %}
+
+{% block body %}
+<h1>Error</h1>
+<p><strong>Error 101<br/>Invalid Wiki Name<br/></strong>The wiki name may not contain spaces or newlines. The wiki name you provided may also be reserved. Please try using a different wiki name<br/></p>
+<a href="{% url 'create'%}">Go back to "Create New Page"</a>
+{% endblock %}

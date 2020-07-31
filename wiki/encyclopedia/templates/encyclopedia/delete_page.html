@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Delete A Page
+{% endblock %}
+{% load prettify %}
+{% block body %}
+    <h1>All Pages To Delete</h1>
+
+    {% for entry in entries %}
+        <a href="del/{{ entry }}">{{ entry|prettify }}</a><br />
+    {% endfor %}
+    </ul>
+{% endblock %}
